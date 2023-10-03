@@ -5,6 +5,7 @@ This is my design for my own homebrew 16-bit RISC machine, inspired by the Amiga
 and the IJERT 'Design of a 16-bit RISC Processor' paper.
 
 ## Specifications
+
 This computer will use 16-bit words for all data. It will allow for a RAM and ROM capacity of 65,536 16-bit words.
 The computer will contain 64 registers (each being one word long) for modifying and manipulating data:
 - 
