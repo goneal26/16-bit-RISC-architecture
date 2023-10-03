@@ -6,10 +6,10 @@ and the IJERT 'Design of a 16-bit RISC Processor' paper.
 
 ## Specifications
 This computer will use 16-bit words for all data. It will allow for a RAM and ROM capacity of 65,536 16-bit words.
-The computer will contain 64 registers (each being one word long) for modifying and manipulating data:
-(in progress)
+The computer will contain 64 data registers (r0 - r63) each also storing one 16-bit word.
 
 ## Machine Language and Assembly
+### Machine Language
 The machine language consists of 16-bit instruction words that appear as follows:
 ```
 o1 o2 o3 o4  d1 d2 d3 d4  d5 d6 s1 s2  s3 s4 s5 s6
