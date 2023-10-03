@@ -19,7 +19,7 @@ Where:
 - d1-d6 refers to the destination register for computation (referred to below as ry)
 - s1-s6 refers to one register operand of a computation (referred to below as rx)
 
-The opcodes consist of the following instructions (indexed by hex value):
+The opcodes consist of the following instructions (indexed by decimal opcode value):
 0) HALT: stops the program clock
 1) ADD: ry = ry + rx
 2) SUB: ry = ry - rx
@@ -30,12 +30,12 @@ The opcodes consist of the following instructions (indexed by hex value):
 7) NOT: ry = ~rx
 8) SHL: ry = rx << 1
 9) SHR: ry = rx >> 1 (arithmetic right shift) <!-- or should i use logical right shift? -->
-A) CPY: ry = rx
-B) MVI: ry = number between 0 and 63
-C) LOAD: ry = RAM[rx]
-D) STORE: RAM[rx] = ry
-E) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
-F) JZRO: set program counter to ry if rx = 0
+10) CPY: ry = rx
+11) MVI: ry = number between 0 and 63
+12) LOAD: ry = RAM[rx]
+13) STORE: RAM[rx] = ry
+14) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
+15) JZRO: set program counter to ry if rx = 0
 
 ## Progress
 - [x] Machine Language Specification
