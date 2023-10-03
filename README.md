@@ -5,8 +5,12 @@ This is my design for my own homebrew 16-bit RISC machine, inspired by the Amiga
 and the IJERT 'Design of a 16-bit RISC Processor' paper.
 
 ## Specifications
+### General
 This computer will use 16-bit words for all data. It will allow for a RAM and ROM capacity of 65,536 16-bit words, meaning RAM and ROM will each have a storage of 128 Kibibytes (or roughly 131.072 kilobytes).
 The computer will contain 64 data registers (r0 - r63) each also storing one 16-bit word.
+
+### Screen and Video Card
+(wip)
 
 ## Machine Language and Assembly
 ### Machine Language
@@ -36,6 +40,9 @@ The opcodes consist of the following instructions:
 14) STORE: RAM[rx] = ry
 15) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
 16) JZRO: set program counter to ry if rx = 0
+
+### Assembly Language and the Assembler
+The assembler will be written in Java, and will allow assembled programs to be outputted as either raw binary files, plaintext binary characters, or plaintext hexcodes.
 
 ## Progress
 - [x] Machine Language Specification
