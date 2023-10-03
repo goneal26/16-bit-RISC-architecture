@@ -11,9 +11,9 @@ The computer will contain 64 registers (each being one word long) for modifying 
 
 ## Machine Language and Assembly
 The machine language consists of 16-bit instruction words that appear as follows:
-
+```
 o1 o2 o3 o4  d1 d2 d3 d4  d5 d6 s1 s2  s3 s4 s5 s6
-
+```
 Where:
 - o1-o4 refers to the opcode
 - d1-d6 refers to the destination register for computation (referred to below as ry)
@@ -32,10 +32,10 @@ The opcodes consist of the following instructions (indexed by hex value):
 9) SHR: ry = rx >> 1 (arithmetic right shift) <!-- or should i use logical right shift? -->
 A) CPY: ry = rx
 B) MVI: ry = number between 0 and 63
-C) LOAD: r
-D) STORE
-E) JUMP
-F) JZRO
+C) LOAD: ry = RAM[rx]
+D) STORE: RAM[rx] = ry
+E) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
+F) JZRO: set program counter to ry if rx = 0
 
 ## Progress
 - [x] Machine Language Specification
@@ -44,4 +44,4 @@ F) JZRO
 - [ ] Emulator
 - [ ] Compiled Language
 - [ ] Logisim Evolution simulation
-(more to be planned later)i
+(more to be planned later)
