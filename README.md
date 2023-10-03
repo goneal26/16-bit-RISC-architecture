@@ -19,23 +19,23 @@ Where:
 - d1-d6 refers to the destination register for computation (referred to below as ry)
 - s1-s6 refers to one register operand of a computation (referred to below as rx)
 
-The opcodes consist of the following instructions (indexed by decimal opcode value):
-0) HALT: stops the program clock
-1) ADD: ry = ry + rx
-2) SUB: ry = ry - rx
-3) MUL: ry = ry * rx
-4) AND: ry = ry & rx
-5) OR: ry = ry | rx
-6) XOR: ry = ry ^ rx
-7) NOT: ry = ~rx
-8) SHL: ry = rx << 1
-9) SHR: ry = rx >> 1 (arithmetic right shift) <!-- or should i use logical right shift? -->
-10) CPY: ry = rx
-11) MVI: ry = number between 0 and 63
-12) LOAD: ry = RAM[rx]
-13) STORE: RAM[rx] = ry
-14) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
-15) JZRO: set program counter to ry if rx = 0
+The opcodes consist of the following instructions:
+1) HALT: stops the program clock
+2) ADD: ry = ry + rx
+3) SUB: ry = ry - rx
+4) MUL: ry = ry * rx
+5) AND: ry = ry & rx
+6) OR: ry = ry | rx
+7) XOR: ry = ry ^ rx
+8) NOT: ry = ~rx
+9) SHL: ry = rx << 1
+10) SHR: ry = rx >> 1 (arithmetic right shift) <!-- or should i use logical right shift? -->
+11) CPY: ry = rx
+12) MVI: ry = number between 0 and 63
+13) LOAD: ry = RAM[rx]
+14) STORE: RAM[rx] = ry
+15) JUMP: unconditionally set program counter to ry <!-- may change because then im not using s1-s6 -->
+16) JZRO: set program counter to ry if rx = 0
 
 ## Progress
 - [x] Machine Language Specification
