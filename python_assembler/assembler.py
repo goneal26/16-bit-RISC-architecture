@@ -68,12 +68,17 @@ def convert(filelines):
             converted_lines.append(output)
     return converted_lines
 
-def write_file(filename, linelist):
+def write_textfile(filename, linelist):
     file = open(filename, 'w')
     for line in linelist:
         file.write(line + '\n')
     file.close()
 
+def write_binfile(filename, linelist):
+    with open(filename, 'wb') as file:
+        for line in linelist:
+            int_value = int(line, 2)
+            bytearray_value = int_value.to_bytes(2, byteorder='big') # WIP
 
 def main():
     file_input = input('Enter filename: ')
@@ -81,6 +86,6 @@ def main():
     file = open_file(file_input.strip())
     no_comments = remove_comments(file)
     converted = convert(no_comments)
-    write_file(new_file_name, converted)
+    write_textfile(new_file_name, converted)
 
 main()
